@@ -1,0 +1,78 @@
+
+body {
+  background: #F4FBF4;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.welcome-box {
+  background: linear-gradient(135deg, #66BB6A, #83e088);
+  color: white;
+  border-radius: 20px;
+}
+
+
+.welcome-box h3 {
+  font-weight: 700;
+}
+
+
+.carousel {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.carousel img {
+  transition: transform 0.5s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.03);
+}
+
+.carousel-caption {
+  background: rgba(46, 125, 50, 0.75);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+
+.card {
+  border-radius: 20px;
+  border: none;
+  background: white;
+}
+
+
+.form-control {
+  border-radius: 12px;
+  border: 1px solid #c8e6c9;
+  padding: 12px;
+}
+
+
+.form-control:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.2);
+}
+
+.btn-success-custom {
+  background: linear-gradient(135deg, #4ff558, #06f512);
+  color: rgb(5, 5, 5);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+
+.btn-success-custom:hover {
+  background: linear-gradient(135deg, #43A047, #2E7D32);
+  transform: translateY(-2px);
+}
+
+
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}

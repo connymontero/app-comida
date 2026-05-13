@@ -1,0 +1,48 @@
+
+.pedidos-bg {
+  background-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(46, 125, 50, 0.65);
+  padding: 20px;
+}
+
+
+form {
+  border-radius: 15px;
+}
+
+
+table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.btn-success-custom {
+  background: linear-gradient(135deg, #66BB6A, #43A047);
+  border: none;
+  color: white;
+  border-radius: 12px;
+}
+
+.btn-success-custom:hover {
+  background: linear-gradient(135deg, #43A047, #2E7D32);
+}
+select.form-control {
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #c8e6c9;
+  background-color: #fff;
+}
+
+select.form-control:focus {
+  border-color: #43A047;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.2);
+}

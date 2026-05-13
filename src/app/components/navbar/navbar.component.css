@@ -1,0 +1,29 @@
+
+.navbar-green {
+  background: linear-gradient(135deg, #66BB6A, #43A047);
+}
+
+
+.navbar-green .nav-link {
+  transition: 0.3s ease;
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+
+
+.navbar-green .nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+
+.navbar-green .nav-link.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+
+.navbar-green .navbar-brand {
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
