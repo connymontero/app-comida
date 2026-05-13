@@ -125,7 +125,7 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
             Ingreso Cliente
           </h2>
 
-          <form (ngSubmit)="login()" #loginForm="ngForm">
+          <form (ngSubmit)="login()" #loginForm="ngForm" (input)="onFormChange()">
 
             <!-- Usuario -->
             <div class="mb-3">
@@ -141,7 +141,12 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
                 class="form-control form-control-lg"
                 placeholder="Ej: cliente"
                 required
+                #nameVar="ngModel"
               >
+              <small class="text-danger"
+                [style.visibility]="(nameVar.invalid && nameVar.touched) ? 'visible' : 'hidden'">
+                El usuario es obligatorio
+              </small>
 
             </div>
 
@@ -159,7 +164,12 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
                 class="form-control form-control-lg"
                 placeholder="****"
                 required
+                #passVar="ngModel"
               >
+              <small class="text-danger"
+                [style.visibility]="(passVar.invalid && passVar.touched) ? 'visible' : 'hidden'">
+                La contraseña es obligatoria
+              </small>
 
             </div>
 
@@ -175,6 +185,14 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
             </button>
 
           </form>
+          <div class="mt-3 text-center">
+            <small class="text-muted">Tip: usa 'cliente' y '1234'</small>
+            <br/>
+            <small class="text-danger"
+                [style.visibility]="!validado ? 'visible' : 'hidden'">
+                Usuario y/o contraseña incorrectos
+              </small>
+          </div>
 
         </div>
 
