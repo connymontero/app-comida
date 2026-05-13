@@ -77,6 +77,85 @@
           </form>
 
         </div>
+<div class="pedidos-bg">
+
+  <div class="overlay">
+
+    <div class="container mt-5">
+
+      <div class="row">
+
+        <!-- FORMULARIO -->
+        <div class="col-md-5">
+
+          <h3 class="text-white fw-bold mb-3">
+            🧾 Formulario de Pedido
+          </h3>
+
+          <form #f="ngForm"
+                (ngSubmit)="registrarPedido(f)"
+                class="p-4 border rounded shadow bg-white">
+
+            <div class="mb-3">
+              <label>Nombre del Cliente</label>
+              <input type="text"
+                     name="nombre"
+                     [(ngModel)]="nombre"
+                     class="form-control"
+                     required
+                     #nameVar="ngModel">
+
+              <small *ngIf="nameVar.invalid && nameVar.touched"
+                     class="text-danger">
+                El nombre es obligatorio
+              </small>
+            </div>
+
+            <div class="mb-3">
+              <label>Producto</label>
+              <select name="producto"
+        [(ngModel)]="producto"
+        class="form-control"
+        required
+        #prodVar="ngModel">
+
+  <option value="" disabled selected>
+    Selecciona un producto
+  </option>
+
+  <option value="Hamburguesa"> Hamburguesa</option>
+  <option value="Pizza"> Pizza</option>
+  <option value="Risotto"> Risotto</option>
+  <option value="Ensalada"> Ensalada</option>
+  <option value="Sushi"> Sushi</option>
+
+</select>
+
+              <small *ngIf="prodVar.invalid && prodVar.touched"
+                     class="text-danger">
+                Indique el producto
+              </small>
+            </div>
+
+            <div class="mb-3">
+              <label>Cantidad</label>
+              <input type="number"
+                     name="cantidad"
+                     [(ngModel)]="cantidad"
+                     class="form-control"
+                     required
+                     min="1">
+            </div>
+
+            <button type="submit"
+                    class="btn btn-success-custom w-100 fw-bold"
+                    [disabled]="f.invalid">
+              Guardar Pedido
+            </button>
+
+          </form>
+
+        </div>
 
         <!-- TABLA -->
         <div class="col-md-7">
@@ -114,8 +193,9 @@
       </div>
 
     </div>
-    </div>
+
   </div>
+
 </div>
 <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
   <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
