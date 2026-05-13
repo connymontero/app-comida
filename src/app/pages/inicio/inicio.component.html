@@ -51,6 +51,7 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
+
     </div>
 
     <!-- login -->
@@ -59,13 +60,17 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
         <div class="card-body p-5 d-flex flex-column justify-content-center">
           <h2 class="text-center mb-4 fw-bold">Ingreso Cliente</h2>
 
-          <form (ngSubmit)="login()" #loginForm="ngForm" (input)="onFormChange()">
+          <!-- Formulario Angular -->
+          <form (ngSubmit)="login()" #loginForm="ngForm">
+
+            <!-- Usuario -->
             <div class="mb-3">
               <label class="form-label">Usuario</label>
               <input type="text" name="usuario" [(ngModel)]="usuario" class="form-control form-control-lg" placeholder="Ej: cliente" required #nameVar="ngModel">
               <small class="text-danger" [style.visibility]="(nameVar.invalid && nameVar.touched) ? 'visible' : 'hidden'">El usuario es obligatorio</small>
             </div>
 
+            <!-- Contraseña -->
             <div class="mb-4">
               <label class="form-label">Contraseña</label>
               <input type="password" name="clave" [(ngModel)]="clave" class="form-control form-control-lg" placeholder="****" required #passVar="ngModel">
@@ -81,7 +86,10 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
             <small class="text-danger" [style.visibility]="!validado ? 'visible' : 'hidden'">Usuario y/o contraseña incorrectos</small>
           </div>
         </div>
+
       </div>
+
     </div>
   </div>
+
 </div>
