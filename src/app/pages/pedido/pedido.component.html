@@ -78,43 +78,36 @@
 
         </div>
 
-        <!-- TABLA -->
-        <div class="col-md-7">
-
-          <h3 class="text-white fw-bold mb-3">
-            📦 Pedidos Realizados
-          </h3>
-
-          <div class="table-responsive mt-3">
-
-            <table class="table table-dark table-striped table-hover rounded">
-
-              <thead>
-                <tr>
-                  <th>Cliente</th>
-                  <th>Producto</th>
-                  <th>Cantidad</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr *ngFor="let p of pedidosRealizados">
-                  <td>{{ p.nombre }}</td>
-                  <td>{{ p.producto }}</td>
-                  <td>{{ p.cantidad }}</td>
-                </tr>
-              </tbody>
-
-            </table>
-
-          </div>
-
-        </div>
-
-      </div>
-
+    <div class="col-md-7">
+<h3 class="text-warning">Pedidos Realizados</h3>
+<div class="table-responsive mt-3">
+        <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let p of pedidosRealizados">
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.producto }}</td>
+            <td>{{ p.cantidad }}</td>
+            </tr>
+        </tbody>
+        </table>
     </div>
-
+    </div>
+</div>
+</div>
+<div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+  <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        ¡Pedido registrado con éxito!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
   </div>
-
 </div>
