@@ -16,13 +16,24 @@ export class InicioComponent {
   clave: string = '';
 
   constructor(private router: Router) {}
+  validado: boolean = true;
 
   login() {
-
+    if(localStorage.getItem('usuario-logeado')){
+      localStorage.removeItem('usuario-logeado');
+    }
     if (this.usuario === 'cliente' && this.clave === '1234') {
+      this.validado = true;
+      localStorage.setItem('usuario-logeado', "true");
       this.router.navigate(['/pedido']);
     } else {
-      alert('Usuario o contraseña incorrectos. Prueba con cliente / 1234');
+      this.validado = false;
+      localStorage.setItem('usuario-logeado', "false");
+      // alert('Usuario o contraseña incorrectos. Prueba con cliente / 1234');
     }
+  }
+
+  onFormChange(){
+    this.validado = true;
   }
 }
