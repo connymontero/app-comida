@@ -1,5 +1,5 @@
 
-
+/* 
 .card {
     transition: transform 0.3s;
     border: none;
@@ -7,4 +7,36 @@
 
 .card:hover {
     transform: translateY(-10px);
+} */
+ /* Sincronización con el estilo de Inicio */
+.jumbotron-custom {
+    background: linear-gradient(135deg, #66BB6A, #83e088);
+    color: white;
+    border-radius: 20px;
+}
+
+.card {
+    border-radius: 20px;
+    border: none;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-title {
+    color: #2E7D32; /* Verde oscuro para los títulos de las cards */
+    font-weight: bold;
+}
+
+.text-success-custom {
+    color: #4CAF50;
+}
+
+/* Sombra suave para los elementos de la página */
+.shadow-custom {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
 }
