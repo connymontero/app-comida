@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './inicio.component.html', 
+  styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
   // Variables para el formulario
