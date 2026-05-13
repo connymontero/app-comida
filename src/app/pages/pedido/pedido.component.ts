@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-pedido',
   standalone: true,
   imports: [FormsModule, CommonModule],
-  templateUrl: './pedido.component.html'
+  templateUrl: './pedido.component.html',
+  styleUrl: './pedido.component.css'   
 })
 export class PedidoComponent implements OnInit {
   nombre: string = '';
