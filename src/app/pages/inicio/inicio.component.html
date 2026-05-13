@@ -60,7 +60,7 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
         <div class="card-body p-5 d-flex flex-column justify-content-center">
           <h2 class="text-center mb-4 fw-bold">Ingreso Cliente</h2>
 
-          <form (ngSubmit)="login()" #loginForm="ngForm">
+          <form (ngSubmit)="login()" #loginForm="ngForm" (input)="onFormChange()">
 
             <!-- Usuario -->
             <div class="mb-3">
