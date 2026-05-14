@@ -80,7 +80,9 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
             </button>
 
           </form>
-
+          <small class="text-danger" [style.visibility]="(!validado) ? 'visible' : 'hidden'">
+            Usuario y/o contraseña incorrectos
+          </small>
         </div>
 
       </div>
@@ -155,7 +157,7 @@ valida > LoginForm cambia el estado > Boton habilita > submit elecuta login() --
       </div>
 
     </div>
-    
+
   </div>
 
 </div>
